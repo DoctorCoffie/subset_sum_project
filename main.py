@@ -1,7 +1,7 @@
 import os
 from utils import load_array, save_results, log_time
 from algorithms.backtracking import time_backtracking
-from algorithms.neighborhood_search import neighborhood_search  # Corrected import
+from algorithms.neighborhood_search import neighborhood_search
 from algorithms.simulated_annealing import time_simulated_annealing
 from algorithms.genetic_algorithm import time_genetic_algorithm
 
@@ -24,7 +24,7 @@ def main():
             log_time("results/times.txt", f"TB-{len(arr)}", time_taken)
         
         # Neighborhood Search
-        solution, time_taken = neighborhood_search(arr)  # Corrected function call
+        solution, time_taken = neighborhood_search(arr)
         results.append((f"SNS-{len(arr)}", solution))
         log_time("results/times.txt", f"TNS-{len(arr)}", time_taken)
         
@@ -44,8 +44,10 @@ def main():
         
         # Save intermediate results
         save_results("results/solutions.txt", results)
+        
 
     print("All operations completed successfully.")
+
 
 if __name__ == "__main__":
     main()

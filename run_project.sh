@@ -7,7 +7,7 @@ echo "Requirements updated."
 
 # Generate integer arrays
 echo "Generating integer arrays..."
-python generate_arrays.py
+python data/generate_arrays.py
 echo "Integer arrays generated."
 
 # Run main.py
